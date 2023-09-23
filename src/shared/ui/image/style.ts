@@ -30,7 +30,9 @@ const Spinner = styled.div`
 
   &.enter-active {
     opacity: 1;
-    transition: opacity 300ms linear, transform 300ms linear;
+    transition:
+      opacity 300ms linear,
+      transform 300ms linear;
   }
 
   &.exit {
@@ -39,7 +41,9 @@ const Spinner = styled.div`
 
   &.exit-active {
     opacity: 0;
-    transition: opacity 300ms linear, transform 300ms linear;
+    transition:
+      opacity 300ms linear,
+      transform 300ms linear;
   }
 `
 const Content = styled.img<StyledImageProps>`

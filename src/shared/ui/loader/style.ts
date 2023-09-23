@@ -16,7 +16,9 @@ const Block = styled.aside`
 
   &.enter-active {
     opacity: 1;
-    transition: opacity 300ms linear, transform 300ms linear;
+    transition:
+      opacity 300ms linear,
+      transform 300ms linear;
   }
 
   &.exit {
@@ -25,7 +27,9 @@ const Block = styled.aside`
 
   &.exit-active {
     opacity: 0;
-    transition: opacity 300ms linear, transform 300ms linear;
+    transition:
+      opacity 300ms linear,
+      transform 300ms linear;
   }
 `
 

@@ -9,7 +9,9 @@ export const StyledButton = styled.button`
   cursor: pointer;
   background-color: ${({ theme }) => theme.color.blue}19;
   border-radius: 0.8rem;
-  transition: border-color 0.15s ease-in, background-color 0.15s ease-in,
+  transition:
+    border-color 0.15s ease-in,
+    background-color 0.15s ease-in,
     color 0.15s ease-in;
 
   @media (min-width: ${BreakpointEnum.EXTRA_LARGE}px) {

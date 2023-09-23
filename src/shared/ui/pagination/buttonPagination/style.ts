@@ -19,8 +19,11 @@ const Button = styled.button<ButtonProps>`
   cursor: pointer;
   background-color: ${({ theme }) => theme.color.blue}19;
   border-radius: 1.2rem;
-  transition: border-color 0.15s ease-in, background-color 0.15s ease-in,
-    color 0.15s ease-in, opacity 0.15s ease-in;
+  transition:
+    border-color 0.15s ease-in,
+    background-color 0.15s ease-in,
+    color 0.15s ease-in,
+    opacity 0.15s ease-in;
   display: none;
 
   &:last-child,

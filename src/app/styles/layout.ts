@@ -1,9 +1,13 @@
 import styled from "styled-components"
 
-const styledMain = styled.div`
+type StyledMainProps = {
+  $paddingTop?: number
+}
+
+const styledMain = styled.div<StyledMainProps>`
   height: 100%;
   display: grid;
-  overflow: auto;
+  padding-top: ${({ $paddingTop }) => $paddingTop || 0}px;
 `
 
 const styledWrapper = styled.div`
@@ -17,7 +21,9 @@ const styledWrapper = styled.div`
 
   &.enter-active {
     opacity: 1;
-    transition: opacity 300ms linear, transform 300ms linear;
+    transition:
+      opacity 300ms linear,
+      transform 300ms linear;
   }
 
   &.exit {
@@ -26,16 +32,13 @@ const styledWrapper = styled.div`
 
   &.exit-active {
     opacity: 0;
-    transition: opacity 300ms linear, transform 300ms linear;
+    transition:
+      opacity 300ms linear,
+      transform 300ms linear;
   }
 `
 const AppWrapper = styled.div`
   display: grid;
-  overflow: hidden;
-  height: 100vh;
-  max-height: 100vh;
-  max-height: 100dvh;
   grid-template-rows: auto 1fr auto;
 `
-
 export const style = { Main: styledMain, Container: styledWrapper, AppWrapper }

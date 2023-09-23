@@ -10,7 +10,12 @@ const styledBlock = styled.header`
   display: flex;
   gap: 1.6rem;
   align-items: center;
-  position: sticky;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  background: ${({ theme }) => theme.color.white};
 `
 const styledLogo = styled.img`
   object-fit: contain;

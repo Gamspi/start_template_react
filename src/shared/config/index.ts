@@ -10,15 +10,15 @@
  * @throwable
  */
 const getEnvVar = (key: string) => {
-  if (import.meta.env[key] === undefined) {
+  if (process.env[key] === undefined) {
     throw new Error(`Env variable ${key} is required`)
   }
-  return import.meta.env[key] || ""
+  return process.env[key] || ""
 }
 
 /** API entrypoint */
-export const API_URL = getEnvVar("VITE_API_URL")
+export const API_URL = getEnvVar("VAR_API_URL")
 /** Режим разработки */
-export const isDevEnv = getEnvVar("DEV")
+export const isDevEnv = getEnvVar("NODE_ENV") === "development"
 // /** Режим продакшена */
-export const isProdEnv = getEnvVar("PROD")
+export const isProdEnv = getEnvVar("NODE_ENV") === "production"
