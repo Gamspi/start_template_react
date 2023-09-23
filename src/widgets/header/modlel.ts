@@ -5,7 +5,6 @@ type ArgsProps = {
 export const useModel = ({ setHeight }: ArgsProps) => {
   const headerRef = useRef<HTMLElement>(null)
   const handleSetHeight = () => {
-    console.log("test")
     if (setHeight && headerRef.current)
       setHeight(headerRef.current.offsetHeight)
   }
