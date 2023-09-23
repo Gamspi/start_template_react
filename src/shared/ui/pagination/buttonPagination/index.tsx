@@ -16,9 +16,9 @@ const Component = (props: Props) => {
     isLastPage,
     paginationRange,
     isActive,
-    handelNext,
+    handleNext,
     onPageChange,
-    handelPrevious,
+    handlePrevious,
   } = useController(props)
 
   if (currentPage === 0 || paginationRange.length < 2) {
@@ -28,7 +28,7 @@ const Component = (props: Props) => {
   return (
     <StyledComponent.Block>
       <StyledComponent.Button
-        onClick={handelPrevious}
+        onClick={handlePrevious}
         disabled={currentPage === 1}
       >
         &#8592;
@@ -51,7 +51,7 @@ const Component = (props: Props) => {
           </StyledComponent.Button>
         )
       })}
-      <StyledComponent.Button onClick={handelNext} disabled={isLastPage}>
+      <StyledComponent.Button onClick={handleNext} disabled={isLastPage}>
         &#8594;
       </StyledComponent.Button>
     </StyledComponent.Block>
